@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Rede';
+    src: url('Rede Rounded F48.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sumana-Bold';
+    src: url('Sumana-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sumana-Regular';
+    src: url('Sumana-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
