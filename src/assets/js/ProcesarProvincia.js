@@ -42,7 +42,7 @@ const actualizar = (id, body) => {
 }
 
 const buscarTodos = () => {
-    const data = axios.get(`http://localhost:8081/provincias`).then(r => r.data)
+    const data = axios.get(`https://app-platos-back.onrender.com/provincias`).then(r => r.data)
     console.log(data)
     return data;
 }

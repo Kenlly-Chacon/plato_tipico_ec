@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="sistema-platillos animate__animated animate__fadeIn">
     <h1>Sistema de Platillos Favoritos por Región</h1>
@@ -83,7 +81,7 @@ export default {
     async buscarPlatillos() {
       if (this.estadoSeleccionado) {
         try {
-          const response = await axios.get(`http://localhost:8081/favoritos?provinciaId=${this.estadoSeleccionado}`);
+          const response = await axios.get(`https://app-platos-back.onrender.com/favoritos?provinciaId=${this.estadoSeleccionado}`);
           this.platillos = response.data;
         } catch (error) {
           console.error('Error al buscar los platillos:', error);
@@ -100,13 +98,13 @@ export default {
     async guardarPlatillo() {
       try {
         if (this.modoEdicion) {
-          await axios.put(`http://localhost:8081/favoritos/${this.platilloActual.id}`, {
+          await axios.put(`https://app-platos-back.onrender.com/favoritos/${this.platilloActual.id}`, {
             platillo: { nombre: this.platilloActual.nombre },
             cantidadPersonas: this.platilloActual.cantidadPersonas,
             provinciaId: this.estadoSeleccionado
           });
         } else {
-          await axios.post('http://localhost:8081/favoritos', {
+          await axios.post('https://app-platos-back.onrender.com/favoritos', {
             platillo: { nombre: this.platilloActual.nombre },
             cantidadPersonas: this.platilloActual.cantidadPersonas,
             provinciaId: this.estadoSeleccionado
@@ -125,7 +123,7 @@ export default {
     },
     async eliminarPlatillo(id) {
       try {
-        await axios.delete(`http://localhost:8081/favoritos/${id}`);
+        await axios.delete(`https://app-platos-back.onrender.com/favoritos/${id}`);
         this.platillos = this.platillos.filter(p => p.id !== id);
       } catch (error) {
         console.error('Error al eliminar el platillo:', error);
@@ -263,3 +261,4 @@ th {
   }
 }
 </style>
+
