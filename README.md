@@ -1,5 +1,10 @@
 # platosfront_2024_kc
 
+## Link
+```
+https://plato-tipico-ec.netlify.app/
+```
+
 ## Project setup
 ```
 npm install
